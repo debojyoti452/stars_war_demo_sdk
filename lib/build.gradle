@@ -1,7 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
+    id 'maven-publish'
+    id 'signing'
 }
 
 android {
@@ -67,27 +68,24 @@ dependencies {
     )
 }
 
-subprojects {
-    apply plugin: "maven-publish"
+afterEvaluate {
+    publishing {
+        publications {
+            dev(MavenPublication) {
+                groupId = 'com.example.starwarsdk'
+                artifactId = 'starwars_sdk'
+                version = 3
 
-    afterEvaluate {
-        publishing {
-            publications {
-                mavenAar(MavenPublication) {
-                    groupId = 'com.example.starwarsdk'
-                    artifactId = 'starwars_sdk'
-                    version = 1.1
-
-                    if (project.plugins.findPlugin("com.android.library")) {
-                        from project(":lib").components.dev
-                    } else {
-                        from components.java
-                    }
-                }
+//                if (project.plugins.findPlugin("com.android.library")) {
+//                    from components.dev
+//                } else {
+//                    from components.java
+//                }
             }
         }
     }
 }
+
 
 /**
  * get value from local.properties

@@ -43,6 +43,8 @@ android {
 
     productFlavors {
         develop {
+            applicationIdSuffix '.develop'
+            versionNameSuffix '-DEVELOP'
             buildConfigField "String", 'API_KEY', "\"" + getLocalPropertiesValue("noteefi.dev.apikey") + "\""
         }
     }

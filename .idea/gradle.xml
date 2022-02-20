@@ -10,9 +10,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib" />
-            <option value="$PROJECT_DIR$/sample_mvp" />
-            <option value="$PROJECT_DIR$/sample_mvvm" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
