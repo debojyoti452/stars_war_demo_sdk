@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull
 /**
  * Main Class
  */
-class StarWars constructor() {
+open class StarWars constructor() {
 
     private var appContext: Context? = null
 
