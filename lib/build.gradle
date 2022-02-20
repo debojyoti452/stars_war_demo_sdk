@@ -71,16 +71,10 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            dev(MavenPublication) {
+            release(MavenPublication) {
                 groupId = 'com.example.starwarsdk'
                 artifactId = 'starwars_sdk'
-                version = 3
-
-//                if (project.plugins.findPlugin("com.android.library")) {
-//                    from components.dev
-//                } else {
-//                    from components.java
-//                }
+                version = 4
             }
         }
     }
