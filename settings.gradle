@@ -3,7 +3,6 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-        maven { url "https://jitpack.io" }
     }
 }
 dependencyResolutionManagement {
@@ -11,10 +10,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-
+        maven { url "https://jitpack.io" }
     }
 }
 rootProject.name = "customerio_demo_sdk"
-include ':sample_mvvm'
+include ':app'
 include ':lib'
-include ':sample_mvp'
