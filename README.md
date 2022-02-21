@@ -159,6 +159,9 @@ dependencies {
             _loading.postValue(true)
         }
     ```
+## Known Bugs
+ - ResponseListener's data is in BackgroundThread and need to transfer to uiThread by Viewmodel or runOnUiThread() methods. Will fix it in Kotlin Coroutines.
+
 ## ScreenShots
 <p float="left">
   <img src="https://github.com/debojyoti452/stars_war_demo_sdk/blob/main/screenshots/Screenshot_1645432356.png" width="300" />
