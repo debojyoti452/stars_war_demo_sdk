@@ -158,8 +158,8 @@ dependencies {
 ## Open Source Plugins used
 | Library | README |
 | ------ | ------ |
-| Retrofit | [https://square.github.io/retrofit/][PlDb] |
-| Kotlin Coroutines | [https://kotlinlang.org/docs/coroutines-overview.html][PlGh] |
-| GSON Serializer | [https://github.com/google/gson][PlGd] |
-| Mockk | [https://mockk.io/][PlOd] |
-| Android STD Libs | [https://developer.android.com/kotlin/first][PlMe] |
+| Retrofit | [https://square.github.io/retrofit/] |
+| Kotlin Coroutines | [https://kotlinlang.org/docs/coroutines-overview.html] |
+| GSON Serializer | [https://github.com/google/gson] |
+| Mockk | [https://mockk.io/] |
+| Android STD Libs | [https://developer.android.com/kotlin/first] |
