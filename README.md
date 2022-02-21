@@ -53,22 +53,22 @@ dependencies {
 * #### People OnResponseListener
  ```kotlin
         private val peopleOnResponseListener = object : ResponseOnListener<Response<People>> {
-        override fun onResult(result: Response<People>) {
-            when (result) {
-                is Response.Success -> {
-                    _loading.postValue(false)
-                    _peopleEyeData.postValue(result.data.getEyeColors())
-                }
+        	override fun onResult(result: Response<People>) {
+            		when (result) {
+				is Response.Success -> {
+				    _loading.postValue(false)
+				    _peopleEyeData.postValue(result.data.getEyeColors())
+				}
 
-                is Response.Error -> {
-                    _loading.postValue(false)
-                    _errorMessage.postValue(Pair(true, result.exception.toString()))
-                }
+				is Response.Error -> {
+				    _loading.postValue(false)
+				    _errorMessage.postValue(Pair(true, result.exception.toString()))
+				}
 
-                is Response.Loading -> {
-                    _loading.postValue(true)
-                }
-            }
+				is Response.Loading -> {
+				    _loading.postValue(true)
+				}
+            	}
         }
     }
  ```
@@ -79,22 +79,22 @@ dependencies {
 * ####  Planet OnResponseListener
  ```kotlin
         private val planetOnResponseListener = object : ResponseOnListener<Response<Planet>> {
-        override fun onResult(result: Response<Planet>) {
-            when (result) {
-                is Response.Success -> {
-                    _loading.postValue(false)
-                    _populationData.postValue(result.data.getFiveClimateAndPopulation())
-                }
+        	override fun onResult(result: Response<Planet>) {
+		    when (result) {
+			is Response.Success -> {
+			    _loading.postValue(false)
+			    _populationData.postValue(result.data.getFiveClimateAndPopulation())
+			}
 
-                is Response.Error -> {
-                    _loading.postValue(false)
-                    _errorMessage.postValue(Pair(true, result.exception.toString()))
-                }
+			is Response.Error -> {
+			    _loading.postValue(false)
+			    _errorMessage.postValue(Pair(true, result.exception.toString()))
+			}
 
-                is Response.Loading -> {
-                    _loading.postValue(true)
-                }
-            }
+			is Response.Loading -> {
+			    _loading.postValue(true)
+			}
+		}
         }
     }
  ```
