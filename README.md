@@ -37,6 +37,11 @@ dependencies {
         -> Response.Error   // will return if any error found. String message will be returned.
         -> Response.Loading // will return Loading State. Show any progress dialog.
  ```
+ - People & Planet Model
+ ```kotlin
+        -> getEyeColors() // is prebuilt function available in People Model which will return an List<eyecolor: String?>? of first 5 people.
+        -> getFiveClimateAndPopulation() // is prebuilt function available in Planet Model which will return an List<Pair<climate: String?, population: String?>>? of first 5 planets.
+ ```
 ## Integrations
 - Initiate StarWars SDK
  ```kotlin
