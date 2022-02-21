@@ -31,4 +31,7 @@
 # My personal proguard configuration for ratrofit2
 -dontwarn okio.**
 -dontwarn javax.annotation.**
--dontwarn retrofit2.Platform$Java8
+-dontwarn retrofit2.PlatformJava8
+-keepclassmembers,allowobfuscation class * {
+  @com.google.gson.annotations.SerializedName <fields>;
+}

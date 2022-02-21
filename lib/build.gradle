@@ -34,7 +34,7 @@ android {
     }
 
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
 //            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -100,11 +100,11 @@ task androidSourcesJar(type: Jar) {
 afterEvaluate {
     publishing {
         publications {
-            release(MavenPublication) {
-                from components.developRelease
+            debug(MavenPublication) {
+                from components.developDebug
 //                println("Components: " + components*.name)
                 artifact androidSourcesJar
-                version = '9.4.0' // or just '1.0'
+                version = '9.5.0'
             }
         }
     }
