@@ -7,7 +7,7 @@ import com.example.lib.src.remote.model.Planet
 import com.example.lib.src.utils.Response
 import com.example.lib.src.utils.SuspendUseCase
 
-internal class PlanetUseCase constructor(
+class PlanetUseCase constructor(
     private val context: Context
 ) : SuspendUseCase<ResponseOnListener<Response<Planet>>>() {
     override suspend fun execute(callBack: ResponseOnListener<Response<Planet>>?) {

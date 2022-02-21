@@ -17,11 +17,11 @@ import org.jetbrains.annotations.NotNull
 /**
  * Main Class
  */
-open class StarWars constructor() {
+class StarWars constructor() {
 
     private var appContext: Context? = null
 
-    internal constructor(
+    constructor(
         appContext: Context,
     ) : this() {
         this.appContext = appContext
@@ -30,7 +30,7 @@ open class StarWars constructor() {
     /**
      * Builder Class
      */
-    open class Builder {
+    class Builder {
         private lateinit var context: Context
 
         fun setContext(@NotNull context: Context): Builder {

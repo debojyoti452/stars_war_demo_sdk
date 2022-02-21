@@ -39,16 +39,6 @@ android {
         jvmTarget = '1.8'
     }
 
-    flavorDimensions "default"
-
-    productFlavors {
-        develop {
-            applicationIdSuffix '.develop'
-            versionNameSuffix '-DEVELOP'
-            buildConfigField "String", 'API_KEY', "\"" + getLocalPropertiesValue("noteefi.dev.apikey") + "\""
-        }
-    }
-
     buildFeatures {
         viewBinding true
     }
