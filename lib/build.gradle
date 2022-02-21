@@ -106,13 +106,13 @@ project.afterEvaluate {
                 from project(":lib").components.developRelease
 //                println("Components: " + components*.name)
                 // Adds javadocs and sources as separate jars.
-                artifact androidJavadocsJar
+//                artifact androidJavadocsJar
                 artifact androidSourcesJar
 
                 // You can customize attributes of the publication here or in module's build.gradle file (if you save this as script and include it build.gradle file, then you can just replicate this whole block there only with changed fields).
                 //groupId = 'com.example'
                 //artifactId = 'custom-artifact'
-                version = android.defaultConfig.versionName // or just '1.0'
+                version = '9.0' // or just '1.0'
             }
         }
     }
