@@ -161,6 +161,7 @@ dependencies {
     ```
 ## Known Bugs
  - ResponseListener's data is in BackgroundThread and need to transfer to uiThread by Viewmodel or runOnUiThread() methods. Will fix it in Kotlin Coroutines.
+ - Test Cases are missing due to SSL Breakdown of APIs. If required will write it down using Mockk.
 
 ## ScreenShots
 <p float="left">
