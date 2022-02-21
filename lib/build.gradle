@@ -97,14 +97,14 @@ task androidSourcesJar(type: Jar) {
 
 // Because the components are created only during the afterEvaluate phase, you must
 // configure your publications using the afterEvaluate() lifecycle method.
-project.afterEvaluate {
+afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                from project(":lib").components.developRelease
+                from components.developRelease
 //                println("Components: " + components*.name)
                 artifact androidSourcesJar
-                version = '9.3.0' // or just '1.0'
+                version = '9.4.0' // or just '1.0'
             }
         }
     }

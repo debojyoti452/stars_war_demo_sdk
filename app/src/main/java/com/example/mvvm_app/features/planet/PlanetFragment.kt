@@ -32,7 +32,9 @@ class PlanetFragment : BaseFragment<FragmentPlanetBinding>() {
     override fun vmObserver() {
         viewModel.populationData.observe(viewLifecycleOwner) {
             binding.planetRV.show(true)
-            populationAdapter.addData(it)
+            if (it != null) {
+                populationAdapter.addData(it)
+            }
         }
 
         viewModel.errorMessage.observe(viewLifecycleOwner) {

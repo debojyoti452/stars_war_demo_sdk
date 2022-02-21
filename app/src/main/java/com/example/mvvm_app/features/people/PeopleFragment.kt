@@ -31,7 +31,9 @@ class PeopleFragment : BaseFragment<FragmentPeopleBinding>() {
     override fun vmObserver() {
         viewModel.peopleEyeData.observe(viewLifecycleOwner) {
             binding.eyePeopleRV.show(true)
-            eyeAdapter.addData(it)
+            if (it != null) {
+                eyeAdapter.addData(it)
+            }
         }
 
         viewModel.errorMessage.observe(viewLifecycleOwner) {

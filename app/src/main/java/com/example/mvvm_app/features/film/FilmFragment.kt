@@ -32,7 +32,9 @@ class FilmFragment : BaseFragment<FragmentFilmBinding>() {
     override fun vmObserver() {
         viewModel.filmData.observe(viewLifecycleOwner) {
             binding.filmRV.show(true)
-            filmAdapter.addData(it)
+            if (it != null) {
+                filmAdapter.addData(it)
+            }
         }
 
         viewModel.errorMessage.observe(viewLifecycleOwner) {
