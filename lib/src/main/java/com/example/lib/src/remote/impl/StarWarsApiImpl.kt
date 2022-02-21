@@ -7,7 +7,7 @@ import com.example.lib.src.remote.model.Film
 import com.example.lib.src.remote.model.People
 import com.example.lib.src.remote.model.Planet
 import com.example.lib.src.remote.repository.StarWarsRepository
-import com.example.lib.src.utils.StarWarErrorExtractor
+import com.example.lib.src.remote.exception.StarWarErrorExtractor
 import com.example.lib.src.utils.Response
 
 internal class StarWarsApiImpl constructor(

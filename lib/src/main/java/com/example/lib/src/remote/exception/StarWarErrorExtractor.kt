@@ -1,4 +1,4 @@
-package com.example.lib.src.utils
+package com.example.lib.src.remote.exception
 
 import com.google.gson.JsonSyntaxException
 import com.example.lib.src.utils.StarWarConstant.CONNECT_EXCEPTION
@@ -11,7 +11,7 @@ import retrofit2.HttpException
 import timber.log.Timber
 import java.net.*
 
-internal object StarWarErrorExtractor {
+object StarWarErrorExtractor {
     fun extractErrorMessage(throwable: Throwable): String {
         return when (throwable) {
             is ConnectException -> CONNECT_EXCEPTION
@@ -26,9 +26,7 @@ internal object StarWarErrorExtractor {
                 val response = throwable.response()
                 try {
                     Timber.d(response?.body().toString())
-                    val json = JSONObject(response?.errorBody()?.string()!!)
-                    val msg = (json["message"] as JSONObject).getString("error")
-                    msg as String
+                    return "Something went really bad."
                 } catch (exception: JSONException) {
                     exception.localizedMessage
                 }
