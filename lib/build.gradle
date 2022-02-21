@@ -104,7 +104,7 @@ project.afterEvaluate {
                 from project(":lib").components.developRelease
 //                println("Components: " + components*.name)
                 artifact androidSourcesJar
-                version = '9.1.0' // or just '1.0'
+                version = '9.2.0' // or just '1.0'
             }
         }
     }

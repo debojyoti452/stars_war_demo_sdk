@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mvvm_app">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name="com.example.mvvm_app.SampleApplication"
         android:allowBackup="true"
@@ -9,7 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NoteefiOTPAuth">
+        android:theme="@style/Theme.SampleSDKTheme">
         <activity
             android:name="com.example.mvvm_app.features.MainActivity"
             android:exported="true">

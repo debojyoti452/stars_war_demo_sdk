@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Noteefi-OTP-Auth</string>
+    <string name="app_name">Sample SDK</string>
     <string name="get_planet">Get Planet</string>
     <string name="get_people">Get People</string>
     <string name="get_films">Get Films</string>

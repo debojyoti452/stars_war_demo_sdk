@@ -23,9 +23,11 @@ class FilmAdapter constructor(
 
     @SuppressLint("NotifyDataSetChanged")
     fun addData(data: List<FilmData>) {
-        dataList.clear()
-        dataList.addAll(data)
-        notifyDataSetChanged()
+        if(data.isNotEmpty()) {
+            dataList.clear()
+            dataList.addAll(data)
+            notifyDataSetChanged()
+        }
     }
 
     override fun onBindViewHolder(holder: FilmViewHolder, position: Int) {

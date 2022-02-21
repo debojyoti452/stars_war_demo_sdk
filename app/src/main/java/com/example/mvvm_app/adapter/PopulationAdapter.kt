@@ -22,9 +22,11 @@ class PopulationAdapter constructor(
 
     @SuppressLint("NotifyDataSetChanged")
     fun addData(data: List<Pair<String?, String?>>) {
-        dataList.clear()
-        dataList.addAll(data)
-        notifyDataSetChanged()
+        if(data.isNotEmpty()) {
+            dataList.clear()
+            dataList.addAll(data)
+            notifyDataSetChanged()
+        }
     }
 
     override fun onBindViewHolder(holder: FilmViewHolder, position: Int) {
