@@ -10,6 +10,12 @@ import com.example.lib.src.remote.repository.StarWarsRepository
 import com.example.lib.src.remote.exception.StarWarErrorExtractor
 import com.example.lib.src.utils.Response
 
+/**
+ * [StarWarsApiImpl] It is our Repository where we call to server and get back
+ * @property Response<T> as a Generic Type.
+ * We are using Kotlin Coroutines and suspend function to make async network calls.
+ * [ResponseOnListener] Callback function which return fetched result to ViewModel.
+ */
 internal class StarWarsApiImpl constructor(
     private val service: NetworkModule = NetworkModule(),
     private val context: Context,

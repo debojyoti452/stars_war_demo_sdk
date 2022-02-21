@@ -12,7 +12,6 @@ import com.example.lib.src.remote.model.People
 import com.example.lib.src.remote.model.Planet
 import com.example.lib.src.utils.Response
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -104,14 +103,14 @@ class MainViewModel @Inject constructor(
     }
 
     fun getPeopleData() {
-        viewModelScope.launch(Dispatchers.Main) {
+        viewModelScope.launch {
             initiateStarWars.getPeople(onListener = peopleOnResponseListener)
         }
     }
 
 
     fun getFilmData() {
-        viewModelScope.launch(Dispatchers.Main) {
+        viewModelScope.launch {
             initiateStarWars.getFilm(onListener = filmOnResponseListener)
         }
     }

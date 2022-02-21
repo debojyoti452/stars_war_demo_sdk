@@ -47,6 +47,12 @@ android {
             buildConfigField "String", 'STARWARS_BASE_URL', "\"" + getLocalPropertiesValue("starwars.dev.baseurl") + "\""
         }
     }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -71,6 +77,15 @@ dependencies {
             ext.testDependencies.junit,
             ext.testDependencies.truth,
             ext.testDependencies.mockk,
+            ext.testDependencies.coroutinesAndroidTest,
+            ext.testDependencies.jUnitX,
+            ext.testDependencies.androidCoreTest,
+            ext.testDependencies.archCoreTest,
+    )
+
+    androidTestImplementation(
+            ext.testDependencies.testRule,
+            ext.testDependencies.testRunner,
     )
 }
 
@@ -109,6 +124,7 @@ afterEvaluate {
         }
     }
 }
+
 /**
  * get value from local.properties
  *

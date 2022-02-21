@@ -6,8 +6,10 @@ import com.example.lib.src.remote.exception.NoNetworkException
 import okhttp3.Interceptor
 import okhttp3.Response
 
-internal class NetworkInterceptor(private val context: Context)  : Interceptor {
-
+/**
+ * Testing Internet Connectivity before request to server using Retrofit.
+ */
+internal class NetworkInterceptor(private val context: Context) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
 
         val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

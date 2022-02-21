@@ -5,6 +5,9 @@ import com.example.lib.src.remote.model.People
 import com.example.lib.src.remote.model.Planet
 import retrofit2.http.GET
 
+/**
+ * [StarWarsApiService] Retrofit APIs Endpoints
+ */
 internal interface StarWarsApiService {
     @GET("people/")
     suspend fun getPeoples(): People

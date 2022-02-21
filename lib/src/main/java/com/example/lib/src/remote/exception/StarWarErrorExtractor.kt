@@ -11,6 +11,10 @@ import retrofit2.HttpException
 import timber.log.Timber
 import java.net.*
 
+/**
+ * [StarWarErrorExtractor] is global interpreter to extract error messages during
+ * failed network calls.
+ */
 object StarWarErrorExtractor {
     fun extractErrorMessage(throwable: Throwable): String {
         return when (throwable) {

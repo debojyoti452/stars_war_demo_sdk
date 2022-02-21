@@ -15,6 +15,9 @@ import java.util.concurrent.TimeUnit
 private const val CONNECTION_TIMEOUT = 30L
 private const val READ_WRITE_TIMEOUT = 60L
 
+/**
+ * [NetworkModule] here we create retrofit instance to use globally in the app.
+ */
 internal class NetworkModule {
 
     private fun okHttpClient(context: Context): OkHttpClient.Builder {
