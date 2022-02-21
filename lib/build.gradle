@@ -74,24 +74,62 @@ dependencies {
     )
 }
 
-afterEvaluate {
+task androidJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    android.libraryVariants.all { variant ->
+        if (variant.name == 'release') {
+            owner.classpath += variant.javaCompileProvider.get().classpath
+        }
+    }
+    exclude '**/R.html', '**/R.*.html', '**/index.html'
+}
+
+task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
+    archiveClassifier.set('javadoc')
+    from androidJavadocs.destinationDir
+}
+
+task androidSourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    from android.sourceSets.main.java.srcDirs
+}
+
+// Because the components are created only during the afterEvaluate phase, you must
+// configure your publications using the afterEvaluate() lifecycle method.
+project.afterEvaluate {
     publishing {
         publications {
-            develop(MavenPublication) {
-//                from components.release
-                groupId = 'com.example'
-                artifactId = 'lib'
-                version = 'v7'
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from project(":lib").components.developRelease
+//                println("Components: " + components*.name)
+                // Adds javadocs and sources as separate jars.
+                artifact androidJavadocsJar
+                artifact androidSourcesJar
+
+                // You can customize attributes of the publication here or in module's build.gradle file (if you save this as script and include it build.gradle file, then you can just replicate this whole block there only with changed fields).
+                //groupId = 'com.example'
+                //artifactId = 'custom-artifact'
+                version = android.defaultConfig.versionName // or just '1.0'
             }
         }
     }
 }
 
-
-task androidSourcesJar(type: Jar) {
-    classifier 'sources'
-    from android.sourceSets.main.java.srcDirs
-}
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+////                from components.release
+//                groupId = 'com.example'
+//                artifactId = 'lib'
+//                version = 'v7'
+//            }
+//        }
+//    }
+//}
 
 /**
  * get value from local.properties
