@@ -94,7 +94,7 @@ dependencies {
 			is Response.Loading -> {
 			    _loading.postValue(true)
 			}
-		    }
+		}
         }
     }
  ```
