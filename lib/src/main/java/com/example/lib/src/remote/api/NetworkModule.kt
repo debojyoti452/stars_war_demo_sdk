@@ -36,7 +36,8 @@ internal class NetworkModule {
 
     private fun createRetrofitService(context: Context): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.STARWARS_BASE_URL)
+//            .baseUrl(BuildConfig.STARWARS_BASE_URL)
+            .baseUrl("https://swapi.dev/api/")
             .client(okHttpClient(context = context).build())
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(CoroutineCallAdapterFactory())

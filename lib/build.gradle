@@ -104,7 +104,7 @@ afterEvaluate {
                 from components.developDebug
 //                println("Components: " + components*.name)
                 artifact androidSourcesJar
-                version = '9.5.0'
+                version = '9.6.0'
             }
         }
     }
