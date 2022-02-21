@@ -1,5 +1,4 @@
 # StarWars SDK
-## _The Last Markdown Editor, Ever_
 
 [![](https://jitpack.io/v/debojyoti452/stars_war_demo_sdk.svg)](https://jitpack.io/#debojyoti452/stars_war_demo_sdk)
 
