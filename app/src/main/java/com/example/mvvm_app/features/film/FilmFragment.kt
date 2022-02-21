@@ -39,7 +39,9 @@ class FilmFragment : BaseFragment<FragmentFilmBinding>() {
 
         viewModel.errorMessage.observe(viewLifecycleOwner) {
             binding.filmRV.show(false)
-            Toast.makeText(requireContext(), it.second, Toast.LENGTH_LONG).show()
+            if (it.first) {
+                Toast.makeText(requireContext(), it.second, Toast.LENGTH_LONG).show()
+            }
         }
 
         viewModel.loading.observe(viewLifecycleOwner) {
