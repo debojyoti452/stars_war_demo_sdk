@@ -5,7 +5,7 @@
 
 StarWars SDK integrates can be used to get Planet, People, & Films list of Star Wars.
 ## Installation
-#### Project Root Level Gradle (Below 7.0)
+#### Project Root Level Gradle
 ```gradle
 allprojects {
 	repositories {
@@ -14,7 +14,7 @@ allprojects {
 }
 ```
 ## OR
-#### settings.gradle Level Gradle (Below 7.0)
+#### settings.gradle Level Gradle
 ```gradle
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
