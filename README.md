@@ -155,7 +155,13 @@ dependencies {
         }
     ```
 ## ScreenShots
-![ScreenShot](/screenshots/Screenshot_1645432356.png  =100x20)
+<p float="left">
+  <img src="https://github.com/debojyoti452/stars_war_demo_sdk/blob/main/screenshots/Screenshot_1645432356.png" width="300" />
+  <img src="https://github.com/debojyoti452/stars_war_demo_sdk/blob/main/screenshots/Screenshot_1645432443.png" width="300" /> 
+  <img src="https://github.com/debojyoti452/stars_war_demo_sdk/blob/main/screenshots/Screenshot_1645432455.png" width="300" />
+  <img src="https://github.com/debojyoti452/stars_war_demo_sdk/blob/main/screenshots/Screenshot_1645432574.png" width="300" />
+</p>
+
 
 ## Open Source Plugins used
 | Library | README |
